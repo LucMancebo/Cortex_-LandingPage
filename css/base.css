@@ -1,0 +1,51 @@
+:root {
+    --bg-dark: #020617;
+    --accent-cyan: #0ea5e9;
+    --accent-violet: #8b5cf6;
+    --accent-blue: #2563eb;
+    --text-light: #f8fafc;
+    --glass-bg: rgba(2, 6, 23, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: transparent;
+    color: var(--text-light);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.4;
+    -ms-overflow-style: none; /* IE/Edge */
+    scrollbar-width: none; /* Firefox */
+
+    &::-webkit-scrollbar {
+        display: none; /* Chrome/Safari/Brave */
+    }
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+
+/* Typography Refinement */
+h1, h2, h3 {
+    font-family: 'Outfit', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 900;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-30px) rotate(2deg); }
+}

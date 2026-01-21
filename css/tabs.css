@@ -1,0 +1,315 @@
+.details-section {
+    padding: 8vh 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--bg-dark);
+    position: relative;
+    z-index: 10;
+}
+
+.section-header {
+    text-align: center;
+    margin: auto;
+    max-width: 800px;
+
+    & h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+
+    & p {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.6;
+    }
+}
+
+
+
+/* Details & Tabs Section */
+
+
+.tabs-container {
+    width: 100%;
+    max-width: 1400px;
+    padding: 10vh 0;
+    /* Add vertical padding for the flow */
+}
+
+/* Premium Card Styles */
+.featured-card {
+    display: flex;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 4rem;
+    /* Increased separation */
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.04);
+        border-color: rgba(255, 255, 255, 0.12);
+        transform: translateY(-12px);
+    }
+
+    &.inverted {
+        flex-direction: row-reverse;
+    }
+
+    .card-image {
+        flex: 1.3;
+        overflow: hidden;
+        position: relative;
+        min-height: 320px;
+        /* Reduced to balance with text volume */
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+            filter: grayscale(10%) brightness(0.9);
+            transition: all 0.7s ease;
+        }
+    }
+
+    &:hover .card-image img {
+        scale: 1.05;
+        opacity: 1;
+        filter: grayscale(0%);
+    }
+
+    .card-body {
+        flex: 1;
+        padding: 2.5rem;
+        /* Balanced whitespace */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        .badge {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.55rem;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            color: var(--accent-cyan);
+        }
+
+        h3 {
+            font-size: 2.2rem;
+            /* Scaled down for better proportion */
+            letter-spacing: -1px;
+            margin-bottom: 1.2rem;
+            line-height: 1.1;
+            font-weight: 900;
+        }
+
+        p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.4);
+            line-height: 1.6;
+            margin-bottom: 0;
+            font-weight: 300;
+        }
+    }
+}
+
+/* Info Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    /* Increased gap for breathing room */
+}
+
+.small-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 30px;
+    padding: 2.5rem;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.04);
+        border-color: rgba(255, 255, 255, 0.1);
+        transform: translateY(-5px);
+    }
+
+    .card-image-mini {
+        width: 100%;
+        height: 180px;
+        border-radius: 15px;
+        overflow: hidden;
+        margin-bottom: 1.5rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6;
+            transition: all 0.5s ease;
+        }
+    }
+
+    &:hover .card-image-mini img {
+        opacity: 1;
+        scale: 1.1;
+    }
+
+    h4 {
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin-bottom: 1.2rem;
+        text-transform: none;
+    }
+
+    p {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.4);
+        line-height: 1.7;
+        margin-bottom: 0;
+    }
+}
+
+/* Buttons */
+.learn-more,
+.learn-more-mini {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0;
+
+    .arrow {
+        transition: transform 0.3s ease;
+    }
+
+    &:hover .arrow {
+        transform: translateX(5px);
+    }
+}
+
+/* Tab Panes (Always Visible in Flow) */
+.tab-pane {
+    display: block !important;
+    opacity: 1 !important;
+    margin-bottom: 15vh;
+    /* Massive spacing between sections */
+}
+
+.tab-pane:last-child {
+    margin-bottom: 0;
+}
+
+/* Hide legacy headers */
+.tabs-header {
+    display: none;
+}
+
+/* Detail Overlay */
+.detail-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(2, 6, 23, 0.95);
+    backdrop-filter: blur(20px);
+    z-index: 2000;
+    display: none;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+
+    &.active {
+        display: flex;
+        animation: fadeInOverlay 0.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    }
+
+    .close-overlay {
+        position: absolute;
+        top: 3rem;
+        right: 5%;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+        opacity: 0.5;
+        transition: opacity 0.3s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .overlay-content {
+        max-width: 800px;
+        width: 100%;
+    }
+
+    .overlay-inner {
+        .overlay-badge {
+            font-size: 0.6rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--accent-cyan);
+            display: block;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 5vw, 4rem);
+            margin-bottom: 3rem;
+            letter-spacing: -1px;
+        }
+
+        .overlay-body {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 300;
+        }
+    }
+}
+
+@keyframes fadeInOverlay {
+    from {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+    }
+
+    to {
+        opacity: 1;
+        backdrop-filter: blur(20px);
+    }
+}
+
+@media (max-width: 1024px) {
+    .featured-card {
+        flex-direction: column;
+
+        &.inverted {
+            flex-direction: column;
+        }
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}

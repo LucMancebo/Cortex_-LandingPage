@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cortex VR | Imersão & Sincronização</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Outfit:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/tabs.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/tech-grid.css">
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+    <div id="loading" class="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+
+    <header class="navbar">
+        <div class="logo"><a href="index.html">Cortex<span>VR</span></a></div>
+        <nav>
+            <a href="#how-it-works" data-i18n="nav-how">How It Works</a>
+            <a href="#applications" data-i18n="nav-cases">Applications</a>
+            <a href="#pricing" data-i18n="nav-pricing">Pricing</a>
+            <a href="#learn" data-i18n="nav-learn">Learn</a>
+        </nav>
+        <div class="auth-buttons">
+            <div class="lang-switcher">
+                <div class="lang-indicator"></div>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn active" data-lang="pt">PT</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="hero" class="hero centered">
+            <div class="hero-content">
+                <h1 class="reveal-text" data-i18n="hero-title">Cortex VR</h1>
+                <p class="fade-in sub-headline" data-i18n="hero-subline">Real-time synchronization for the immersive
+                    world.</p>
+                <div class="hero-actions">
+                    <button class="glow-button" data-i18n="hero-cta">Begin the Passage</button>
+                    <a href="#how-it-works" class="glass-button" data-i18n="hero-learn">How it works</a>
+                </div>
+            </div>
+
+            <div class="hero-bottom">
+                <div class="footer-left" data-i18n="footer-text">The journey begins in stillness.</div>
+
+                <div class="meta-description">
+                    <p data-i18n="hero-description">The ultimate PWA for syncing video playback across multiple VR
+                        devices in real-time. Centralized control for professional immersive experiences.</p>
+                </div>
+
+                <div class="scroll-hint">
+                    <a href="#how-it-works" data-i18n="scroll-hint">[Scroll to Explore]</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="details-section">
+            <div class="section-header">
+                <h1 data-i18n="how-it-works-title">How it works</h1>
+                <p data-i18n="how-it-works-description">The Cortex VR system is built on a robust and scalable
+                    architecture
+                    designed to handle the demands of professional and educational immersive experiences. Here's how it
+                    works:</p>
+            </div>
+
+        </section>
+
+        <section id="how-it-works" class="details-section">
+
+
+
+            <div class="tabs-container">
+                <div class="tabs-content">
+                </div>
+
+                <!-- Admin Tab -->
+                <div id="admin" class="tab-pane">
+                    <div class="featured-card inverted">
+                        <div class="card-body">
+                            <span class="badge" data-i18n="tab-admin">Operations</span>
+                            <h3 data-i18n="admin-title">Command Center</h3>
+                            <p data-i18n="admin-text">Full control over the video library, uploads, and real-time
+                                monitoring of all connected devices through a dedicated panel.</p>
+
+                        </div>
+                        <div class="card-image">
+                            <img src="C:/Users/User/.gemini/antigravity/brain/37e39513-59e3-490c-b87a-2cac37943347/admin_dashboard_abstract_1768943634815.png"
+                                alt="Admin Dashboard">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VR Tab -->
+                <div id="vr" class="tab-pane">
+                    <div class="featured-card">
+                        <div class="card-image">
+                            <img src="C:/Users/User/.gemini/antigravity/brain/37e39513-59e3-490c-b87a-2cac37943347/vr_headset_minimal_1768943619587.png"
+                                alt="VR Experience">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge" data-i18n="tab-vr">Experience</span>
+                            <h3 data-i18n="vr-title">Seamless Experience</h3>
+                            <p data-i18n="vr-text">Jump straight into the action. VR users connect automatically to
+                                the sync server for a zero-hassle viewing session.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            </div>
+        </section>
+
+        <section id="tech-features" class="details-section">
+            <div class="section-header">
+                <h1 data-i18n="tech-grid-title">Tecnologias</h1>
+            </div>
+            <div class="tech-cards">
+                <div class="tech-card">
+                    <img src="assets/icons/pwa.svg" alt="PWA Icon" class="tech-icon">
+                    <h4 data-i18n="tech-pwa-title">Progressive Web App</h4>
+                    <p data-i18n="tech-pwa-desc">Install on any device for a native-like experience and offline access.
+                    </p>
+                </div>
+                <div class="tech-card">
+                    <img src="assets/icons/websockets.svg" alt="WebSockets Icon" class="tech-icon">
+                    <h4 data-i18n="tech-websockets-title">WebSockets</h4>
+                    <p data-i18n="tech-websockets-desc">Real-time, bidirectional communication for instant sync.
+                    </p>
+                </div>
+                <div class="tech-card">
+                    <img src="assets/icons/nodejs.svg" alt="Node.js Icon" class="tech-icon">
+                    <h4 data-i18n="tech-nodejs-title">Node.js</h4>
+                    <p data-i18n="tech-nodejs-desc">High-performance backend for managing dozens of connections.</p>
+                </div>
+                <div class="tech-card">
+                    <img src="assets/icons/webrtc.svg" alt="WebRTC Icon" class="tech-icon">
+                    <h4 data-i18n="tech-webrtc-title">WebRTC</h4>
+                    <p data-i18n="tech-webrtc-desc">Peer-to-peer connections for ultra-low latency video streaming.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="applications" class="details-section">
+            <div class="section-header">
+                <h1 data-i18n="applications-title">Applications</h1>
+                <p data-i18n="applications-description">The Cortex VR system is built on a robust and scalable
+                    architecture designed to handle the demands of professional and educational immersive experiences.
+                    Here's how it works:</p>
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+    <!-- Smooth Scroll (Lenis) -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+
+    <!-- GSAP & Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <!-- Three.js (r134 for Vanta compatibility) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <!-- Vanta.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+    <!-- Application Entry -->
+    <script src="js/background.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

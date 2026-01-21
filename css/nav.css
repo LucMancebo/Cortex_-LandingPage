@@ -1,0 +1,114 @@
+/* Navbar Modernization */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background: transparent;
+    border: none;
+
+    &.scrolled {
+        background: rgba(2, 6, 23, 0.5);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        padding: 1rem 8%;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+        font-weight: 200;
+        color: white;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+
+        span {
+            font-weight: 200;
+            opacity: 0.5;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+    nav {
+        display: flex;
+        gap: 4rem;
+        align-items: center;
+
+        a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            font-size: 0.65rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            transition: all 0.3s;
+
+            &:hover {
+                color: white;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/* Language Switcher */
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-right: 2rem;
+    position: relative;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    .lang-btn {
+        background: none;
+        border: none;
+        color: rgba(255, 255, 255, 0.4);
+        cursor: pointer;
+        padding: 4px 8px;
+        font-size: 0.65rem;
+        font-weight: 300;
+        letter-spacing: 2px;
+        transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        position: relative;
+        z-index: 1;
+
+        &.active {
+            color: white;
+            font-weight: 600;
+        }
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    /* Moving background pill for active language */
+    .lang-indicator {
+        position: absolute;
+        height: calc(100% - 10px);
+        width: 40px; /* Base width, will be updated by JS */
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50px;
+        transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        z-index: 0;
+        pointer-events: none;
+    }
+}
+
+/* Auth Buttons container remains for lang-switcher but buttons are gone */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
