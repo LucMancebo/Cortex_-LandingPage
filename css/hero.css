@@ -64,20 +64,11 @@
 }
 
 .hero .hero-content h1 {
-    font-size: clamp(2rem, 5vw, 6rem);
-    margin-bottom: 2rem;
+    font-family: "inter", sans-serif;
+    font-size: clamp(6rem, 5vw, 8rem);
     letter-spacing: -1px;
     font-weight: 100;
-    line-height: 1.2;
-}
-
-.title-prefix {
-    display: block;
-    font-size: 0.4em;
-    opacity: 0.7;
-    margin-bottom: 0.5rem;
-    text-transform: lowercase;
-    font-style: italic;
+    line-height: 1.4;
 }
 
 .hero .hero-content .sub-headline {

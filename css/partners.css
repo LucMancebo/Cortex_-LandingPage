@@ -60,6 +60,10 @@
     color: white;
 }
 
+.partner-logo img {
+    width: 200px;
+}
+
 .partner-name {
     font-family: 'Outfit', sans-serif;
     font-weight: 600;

@@ -2,8 +2,9 @@
 .main-footer {
     padding: 10vh 8% 4rem;
     height: 100vh;
-    background: #000;
+    background: linear-gradient(to bottom,var(--bg-dark), rgba(0, 0, 0));
     position: relative;
+    overflow: hidden;
     z-index: 10;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -104,9 +105,9 @@
 }
 
 .company-logo-type {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 1.1rem;
-    color: white;
+    color: rgb(80, 80, 80);
     letter-spacing: 0.5px;
 }
 

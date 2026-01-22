@@ -19,11 +19,13 @@
     }
 
     .logo {
-        font-size: 1.1rem;
-        font-weight: 200;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.4rem;
+        font-weight: 100;   
         color: white;
-        letter-spacing: 6px;
+        letter-spacing: 2px;
         text-transform: uppercase;
+
         
         transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 

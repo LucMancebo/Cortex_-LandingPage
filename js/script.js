@@ -4,7 +4,7 @@
 
 export function initNavigation() {
     // Nav functional links
-    document.querySelectorAll('nav a, .hero-actions a, .scroll-hint a').forEach(link => {
+    document.querySelectorAll('nav a, .hero-actions a, .scroll-hint a, footer a').forEach(link => {
         link.addEventListener('click', (e) => {
             const href = link.getAttribute('href');
             if (href && href.startsWith('#')) {

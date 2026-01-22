@@ -200,7 +200,7 @@ export function initAnimations() {
     });
   });
 
-  // Feature Cards Animations - NOVO!
+  // Feature Cards Animations
   const featureCards = document.querySelectorAll(".feature-card");
   featureCards.forEach((card, i) => {
     gsap.from(card, {
