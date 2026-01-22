@@ -244,29 +244,47 @@ export function initAnimations() {
     }
   });
 
-  // Section Headers com parallax - SEM opacity
+  // Partners Section Animations - explicit fromTo for guaranteed visibility
+  gsap.fromTo(".partner-logo", 
+    { y: 40, opacity: 0 },
+    {
+      y: 0,
+      opacity: 1,
+      stagger: 0.1,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".partners-section",
+        start: "top 95%",
+        toggleActions: "play none none reverse" // Re-animate if scrolling back up
+      }
+    }
+  );
+
+  // Section Headers com parallax - Refinado para subida/descida
   const headers = document.querySelectorAll(".section-header");
   headers.forEach((header) => {
     gsap.from(header, {
       scrollTrigger: {
         trigger: header,
-        start: "top 85%",
-        end: "top 60%",
-        scrub: 1,
+        start: "top 90%",
+        toggleActions: "play none none none"
       },
-      y: 60,
-      ease: "power2.out",
+      y: 40,
+      opacity: 0,
+      duration: 1.2,
+      ease: "power3.out",
     });
 
-    // Parallax suave nos headers
+    // Parallax persistente
     gsap.to(header, {
       scrollTrigger: {
         trigger: header,
         start: "top bottom",
         end: "bottom top",
-        scrub: 2,
+        scrub: 1.2,
       },
-      y: -25,
+      y: -50,
       ease: "none",
     });
   });
@@ -276,10 +294,11 @@ export function initAnimations() {
     scrollTrigger: {
       trigger: ".applications-section",
       start: "top 80%",
-      end: "top 50%",
-      scrub: 1,
+      toggleActions: "play none none none"
     },
-    y: 100,
+    y: 60,
+    opacity: 0,
+    duration: 1.2,
     ease: "power2.out",
   });
 
@@ -289,25 +308,88 @@ export function initAnimations() {
       scrollTrigger: {
         trigger: ".applications-section",
         start: "top 70%",
-        end: "top 40%",
-        scrub: 1.2,
+        toggleActions: "play none none none"
       },
-      x: 50,
+      x: 30,
       opacity: 0,
-      delay: i * 0.2,
+      delay: i * 0.1,
+      duration: 0.8,
       ease: "power2.out",
     });
   });
 
-  gsap.from(".app-media-container", {
+  // How to Use Section Animations - Cinematic scale
+  gsap.fromTo(".how-video-wrapper", 
+    { scale: 0.9, opacity: 0, y: 50 },
+    {
+      scale: 1,
+      opacity: 1,
+      y: 0,
+      duration: 1.5,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: ".how-to-use-section",
+        start: "top 75%",
+        toggleActions: "play none none reverse"
+      }
+    }
+  );
+
+  // Parallax constante no vídeo
+  gsap.to(".how-video-wrapper", {
     scrollTrigger: {
-      trigger: ".applications-section",
-      start: "top 75%",
-      end: "top 45%",
-      scrub: 1.5,
+      trigger: ".how-video-wrapper",
+      start: "top bottom",
+      end: "bottom top",
+      scrub: 0.8,
     },
-    scale: 0.9,
-    x: -50,
-    ease: "power2.out",
+    y: -40,
+    ease: "none",
   });
+
+  // Download Section Animations - explicit fromTo for guaranteed visibility
+  gsap.fromTo(".download-card", 
+    { y: 60, opacity: 0, scale: 0.98 },
+    {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      stagger: 0.1,
+      duration: 1.2,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: ".download-grid",
+        start: "top 95%",
+        toggleActions: "play none none reverse"
+      }
+    }
+  );
+
+  // Footer reveal - Otimizado para 100vh
+  gsap.from(".footer-top > *", {
+    scrollTrigger: {
+      trigger: ".main-footer",
+      start: "top 60%", // Começa um pouco antes para o 100vh
+    },
+    y: 50,
+    opacity: 0,
+    stagger: 0.12,
+    duration: 1,
+    ease: "power3.out"
+  });
+
+  gsap.from(".huge-logo", {
+    scrollTrigger: {
+      trigger: ".footer-brand-huge",
+      start: "top 85%",
+    },
+    y: 120,
+    scale: 0.95,
+    opacity: 0,
+    duration: 1.5,
+    ease: "power4.out"
+  });
+
+  // Refresh ScrollTrigger at the end to ensure all positions are correct
+  ScrollTrigger.refresh();
 }

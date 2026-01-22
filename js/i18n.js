@@ -14,13 +14,13 @@ export function initI18n(translations) {
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             if (currentLang === btn.dataset.lang) return;
-            
+
             currentLang = btn.dataset.lang;
             localStorage.setItem('cortex-lang', currentLang);
-            
+
             document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            
+
             updateContent(false);
             updateLangIndicator();
         });
@@ -38,10 +38,10 @@ function updateLangIndicator(instant = false) {
     if (!activeBtn || !indicator) return;
 
     if (instant) indicator.style.transition = 'none';
-    
+
     indicator.style.width = `${activeBtn.offsetWidth}px`;
     indicator.style.left = `${activeBtn.offsetLeft}px`;
-    
+
     if (instant) {
         setTimeout(() => indicator.style.transition = '', 50);
     }
@@ -54,16 +54,16 @@ export function scrambleText(element, finalValue) {
     let frame = 0;
 
     const tl = gsap.timeline();
-    
+
     tl.to({}, {
         duration: duration,
-        onUpdate: function() {
+        onUpdate: function () {
             frame++;
             if (frame % frameSkip !== 0) return;
 
             let result = "";
             const progress = this.progress();
-            
+
             for (let i = 0; i < finalValue.length; i++) {
                 if (i < progress * finalValue.length) {
                     result += finalValue[i];
@@ -73,7 +73,7 @@ export function scrambleText(element, finalValue) {
             }
             element.textContent = result;
         },
-        onComplete: function() {
+        onComplete: function () {
             element.textContent = finalValue;
         }
     });
@@ -83,19 +83,28 @@ export function scrambleText(element, finalValue) {
 
 export function updateContent(isInitial = false) {
     if (!appTranslations) return;
-    
+
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.dataset.i18n;
         const targetText = appTranslations[currentLang][key];
-        
+
         if (targetText) {
-            if (isInitial) {
-                el.textContent = targetText;
+            // Check if text contains HTML tags (for branding)
+            const hasHTML = /<[a-z][\s\S]*>/i.test(targetText);
+
+            if (isInitial || hasHTML) {
+                el.innerHTML = targetText;
             } else {
                 scrambleText(el, targetText);
             }
         }
     });
+
+    // Update Page Title if key exists
+    const pageTitle = appTranslations[currentLang]['page-title'];
+    if (pageTitle) {
+        document.title = pageTitle;
+    }
 }
 
 export const getCurrentLang = () => currentLang;

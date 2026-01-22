@@ -1,0 +1,98 @@
+/* Partners Section Styles */
+.partners-section {
+    padding: 3rem 8%;
+    background: var(--bg-dark);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+
+/* Subtle Top Glow */
+.partners-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent)
+}
+
+.partners-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.partners-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: rgba(255, 255, 255);
+    margin-bottom: 0.5rem;
+}
+
+.partners-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6rem;
+    width: 100%;
+}
+
+.partner-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.4;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    cursor: pointer;
+    color: white;
+}
+
+.partner-name {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.partner-logo:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+    color: var(--accent-cyan);
+    text-shadow: 0 0 20px rgba(99, 118, 127, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .partners-logos {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .partners-section {
+        padding: 2.5rem 5%;
+    }
+
+    .partners-logos {
+        gap: 2rem;
+    }
+
+    .partner-logo svg,
+    .partner-logo img {
+        height: 25px;
+    }
+}

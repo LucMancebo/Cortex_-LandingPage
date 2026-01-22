@@ -24,6 +24,12 @@
         color: white;
         letter-spacing: 6px;
         text-transform: uppercase;
+        
+        transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+
+        &:hover {
+            text-shadow: 0 0 5px rgba(255, 255, 255, 1);
+        }
 
         span {
             font-weight: 200;

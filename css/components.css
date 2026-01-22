@@ -53,6 +53,57 @@
     box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
 }
 
+/* Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.logo-text {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.logo-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--accent-cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent-cyan);
+}
+
+.logo-dot.small {
+    width: 4px;
+    height: 4px;
+}
+
+/* Generic Logo Component for Text Mentions */
+.cortex-logo-text {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 100;
+    letter-spacing: 1px;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    text-transform: uppercase;
+    font-size: inherit;
+}
+
+.cortex-logo-text.thin {
+    font-weight: 300;
+    letter-spacing: 4px;
+}
+
+.cortex-logo-text.large {
+    font-size: 1.5em;
+}
+
 /* Loading Screen */
 .loading-screen {
     position: fixed;

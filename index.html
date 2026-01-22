@@ -19,6 +19,10 @@
     <link rel="stylesheet" href="css/tech-grid.css">
     <link rel="stylesheet" href="css/features.css">
     <link rel="stylesheet" href="css/applications.css">
+    <link rel="stylesheet" href="css/how-to-use.css">
+    <link rel="stylesheet" href="css/partners.css">
+    <link rel="stylesheet" href="css/download.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
@@ -32,8 +36,8 @@
         <nav>
             <a href="#how-it-works" data-i18n="nav-how">How It Works</a>
             <a href="#applications" data-i18n="nav-cases">Applications</a>
-            <a href="#pricing" data-i18n="nav-pricing">Pricing</a>
-            <a href="#learn" data-i18n="nav-learn">Learn</a>
+            <a href="#how-to-use" data-i18n="nav-pricing">how to use</a>
+            <a href="#download" data-i18n="nav-learn">Download</a>
         </nav>
         <div class="auth-buttons">
             <div class="lang-switcher">
@@ -53,7 +57,8 @@
             </video>
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h1 class="reveal-text" data-i18n="hero-title">Cortex VR</h1>
+                <h1 class="reveal-text" data-i18n="hero-title"><span class="title-prefix">Sincronize sua realidade
+                        com</span> <span class="cortex-logo-text thin large">CORTEXVR</span></h1>
                 <p class="fade-in sub-headline" data-i18n="hero-subline">Real-time synchronization for the immersive
                     world.</p>
                 <div class="hero-actions">
@@ -72,6 +77,20 @@
 
                 <div class="scroll-hint">
                     <a href="#how-it-works" data-i18n="scroll-hint">[Scroll to Explore]</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="partners-section">
+            <div class="partners-container">
+                <p class="partners-label" data-i18n="partners-title">Partners</p>
+                <div class="partners-logos">
+                    <div class="partner-logo">
+                        <span class="partner-name">Prefeitura de Macaé</span>
+                    </div>
+                    <div class="partner-logo">
+                        <span class="partner-name">Crios - UFRJ</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -302,7 +321,181 @@
             </div>
         </section>
 
+        <section id="how-to-use" class="how-to-use-section">
+            <div class="section-header">
+                <h1 data-i18n="how-use-title">Como Usar</h1>
+                <p data-i18n="how-use-subtitle">Assista ao nosso guia cinematográfico para dominar a sincronização
+                    imersiva em minutos.</p>
+            </div>
 
+            <div class="how-video-wrapper">
+                <div class="how-video-container">
+                    <video autoplay muted loop playsinline class="how-video" id="tutorial-video">
+                        <source
+                            src="https://assets.mixkit.co/videos/preview/mixkit-close-up-of-a-person-working-on-a-production-line-34676-large.mp4"
+                            type="video/mp4">
+                    </video>
+                    <div class="video-overlay"></div>
+
+                    <div class="video-status-tag">
+                        <div class="status-dot"></div>
+                        <span data-i18n="video-status">Tutorial do Sistema</span>
+                    </div>
+
+                    <div class="play-guide-btn">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" fill="currentColor" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="download" class="download-section">
+            <div class="download-top">
+                <div class="section-header">
+                    <h1 data-i18n="download-title">Download Cortex VR</h1>
+                    <p data-i18n="download-subtitle">Choose your platform and begin the passage.</p>
+                </div>
+            </div>
+
+            <div class="download-grid">
+                <!-- Windows Card -->
+                <div class="download-card">
+                    <div class="platform-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M0 3.449L9.75 2.1V11.4H0V3.449zm0 8.851h9.75v9.3L0 20.25V12.3zm10.55 9.45l12.45 1.8V12.3h-12.45v9.45zm0-18.3v9.3h12.45V1.2L10.55 3.45z" />
+                        </svg>
+                    </div>
+                    <h3 data-i18n="download-win-title">Windows</h3>
+                    <div class="download-links">
+                        <a href="#" class="download-link-item">
+                            <span><span data-i18n="download-for">Download for</span> x64</span>
+                            <svg class="download-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>
+                        </a>
+                        <a href="#" class="download-link-item">
+                            <span><span data-i18n="download-for">Download for</span> ARM64</span>
+                            <svg class="download-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- VR Card -->
+                <div class="download-card">
+                    <div class="platform-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M21 7H3a2 2 0 00-2 2v6a2 2 0 002 2h18a2 2 0 002-2V9a2 2 0 00-2-2zM7 14a2 2 0 110-4 2 2 0 010 4zm10 0a2 2 0 110-4 2 2 0 010 4z" />
+                        </svg>
+                    </div>
+                    <h3 data-i18n="download-vr-title">VR Headset</h3>
+                    <div class="download-links">
+                        <a href="#" class="download-link-item">
+                            <span data-i18n="download-quest">Meta Quest (SideQuest)</span>
+                            <svg class="download-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>
+                        </a>
+                        <a href="#" class="download-link-item">
+                            <span data-i18n="download-client">Cortex VR Client (.apk)</span>
+                            <svg class="download-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Android Card -->
+                <div class="download-card">
+                    <div class="platform-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M17.523 15.3414L19.165 18.1854C19.349 18.5034 19.24 18.9094 18.921 19.0934C18.603 19.2774 18.197 19.1684 18.013 18.8504L16.353 15.9814C15.06 16.6374 13.585 17.0214 12.021 17.0214C10.457 17.0214 8.981 16.6374 7.689 15.9814L6.029 18.8504C5.845 19.1684 5.439 19.2774 5.121 19.0934C4.802 18.9094 4.693 18.5034 4.877 18.1854L6.519 15.3414C4.195 13.8444 2.651 11.3284 2.521 8.42344H21.521C21.391 11.3284 19.847 13.8444 17.523 15.3414ZM7.521 12.3254C8.018 12.3254 8.421 11.9224 8.421 11.4254C8.421 10.9284 8.018 10.5254 7.521 10.5254C7.024 10.5254 6.621 10.9284 6.621 11.4254C6.621 11.9224 7.024 12.3254 7.521 12.3254ZM16.521 12.3254C17.018 12.3254 17.421 11.9224 17.421 11.4254C17.421 10.9284 17.018 10.5254 16.521 10.5254C16.024 10.5254 15.621 10.9284 15.621 11.4254C15.621 11.9224 16.024 12.3254 16.521 12.3254ZM12.021 2.02144C12.49 2.02144 12.871 1.64044 12.871 1.17144C12.871 0.702438 12.49 0.321442 12.021 0.321442C11.552 0.321442 11.171 0.702438 11.171 1.17144C11.171 1.64044 11.552 2.02144 12.021 2.02144Z" />
+                        </svg>
+                    </div>
+                    <h3 data-i18n="download-mobile-title">Mobile Apk</h3>
+                    <div class="download-links">
+                        <a href="#" class="download-link-item">
+                            <span><span data-i18n="download-for">Download for</span> <span
+                                    data-i18n="download-mobile-apk">Mobile (.apk)</span></span>
+                            <svg class="download-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="main-footer">
+            <div class="footer-top">
+                <div class="footer-tagline" data-i18n="footer-tagline">Experience liftoff</div>
+                <div class="footer-nav-grid">
+                    <div class="footer-nav-col">
+                        <h4 data-i18n="footer-product">Product</h4>
+                        <ul>
+                            <li><a href="download.html" data-i18n="nav-learn">Download</a></li>
+                            <li><a href="#how-it-works" data-i18n="nav-how">Technology</a></li>
+                            <li><a href="#applications" data-i18n="nav-cases">Use Cases</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-col">
+                        <h4 data-i18n="footer-resources">Resources</h4>
+                        <ul>
+                            <li><a href="#" data-i18n="footer-blog">Blog</a></li>
+                            <li><a href="#" data-i18n="footer-docs">Docs</a></li>
+                            <li><a href="#" data-i18n="footer-changelog">Changelog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-col">
+                        <h4 data-i18n="footer-support">Support</h4>
+                        <ul>
+                            <li><a href="#" data-i18n="footer-help">Help Center</a></li>
+                            <li><a href="#" data-i18n="footer-privacy">Privacy</a></li>
+                            <li><a href="#" data-i18n="footer-terms">Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-brand-huge">
+                <div class="huge-logo">
+                    CORTEXVR
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-company">
+                    <span class="company-logo-type" data-i18n="footer-skyx">Sky X Tecnologia</span>
+                </div>
+                <div class="footer-legal">
+                    <a href="#" data-i18n="footer-about">About Sky X</a>
+                    <a href="#" data-i18n="footer-privacy">Privacy</a>
+                    <a href="#" data-i18n="footer-terms">Terms</a>
+                </div>
+            </div>
+        </footer>
     </main>
 
     <!-- Smooth Scroll (Lenis) -->
