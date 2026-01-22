@@ -1,0 +1,192 @@
+/* Applications Section Styles */
+.applications-section {
+    padding: 10vh 8%;
+    background: var(--bg-dark);
+    position: relative;
+    z-index: 10;
+}
+
+.apps-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1400px;
+    margin: 4rem auto 0;
+}
+
+/* Left Column: Media Preview */
+.app-media-container {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.app-media-container:hover {
+    border-color: rgba(14, 165, 233, 0.3);
+    box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.7), 0 0 20px rgba(14, 165, 233, 0.1);
+}
+
+.app-media-content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+}
+
+.app-media-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(2, 6, 23, 0.8) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.app-media-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    z-index: 5;
+}
+
+.app-media-play-btn svg {
+    width: 30px;
+    height: 30px;
+    color: white;
+    fill: white;
+    margin-left: 4px;
+}
+
+.app-media-play-btn:hover {
+    background: var(--accent-cyan);
+    border-color: var(--accent-cyan);
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 0 30px rgba(14, 165, 233, 0.6);
+}
+
+/* Right Column: Interaction Cards */
+.app-cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.app-item-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2.2rem 2rem;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
+    filter: grayscale(0.5);
+    opacity: 0.7;
+}
+
+.app-item-card::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: var(--accent-cyan);
+    transform: scaleY(0);
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 0 15px var(--accent-cyan);
+}
+
+.app-item-card:hover {
+    background: rgba(14, 165, 233, 0.03);
+    border-color: rgba(14, 165, 233, 0.15);
+    transform: translateX(5px);
+    filter: grayscale(0.2);
+    opacity: 0.9;
+}
+
+.app-item-card.active {
+    background: rgba(14, 165, 233, 0.08);
+    border-color: rgba(14, 165, 233, 0.3);
+    transform: translateX(15px);
+    filter: grayscale(0);
+    opacity: 1;
+    box-shadow: 0 10px 30px -10px rgba(14, 165, 233, 0.2);
+}
+
+.app-item-card.active::after {
+    transform: scaleY(1);
+}
+
+.app-item-header {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.app-item-icon {
+    width: 24px;
+    height: 24px;
+    color: rgba(255, 255, 255, 0.3);
+    transition: all 0.4s ease;
+}
+
+.app-item-card.active .app-item-icon {
+    color: var(--accent-cyan);
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 5px var(--accent-cyan));
+}
+
+.app-item-card h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.app-item-card p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .apps-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .app-media-container {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .applications-section {
+        padding: 8vh 5%;
+    }
+
+    .app-media-play-btn {
+        width: 60px;
+        height: 60px;
+    }
+}

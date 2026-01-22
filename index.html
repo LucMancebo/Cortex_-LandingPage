@@ -17,8 +17,8 @@
     <link rel="stylesheet" href="css/tabs.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/tech-grid.css">
-    <link rel="stylesheet" href="css/background.css">
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/features.css">
+    <link rel="stylesheet" href="css/applications.css">
 </head>
 
 <body>
@@ -38,8 +38,8 @@
         <div class="auth-buttons">
             <div class="lang-switcher">
                 <div class="lang-indicator"></div>
-                <button class="lang-btn" data-lang="en">EN</button>
                 <button class="lang-btn active" data-lang="pt">PT</button>
+                <button class="lang-btn" data-lang="en">EN</button>
             </div>
         </div>
     </header>
@@ -47,6 +47,11 @@
     <main>
 
         <section id="hero" class="hero centered">
+            <video id="hero-video" autoplay muted loop playsinline>
+                <source src="assets/video/motion2Fast_Animated_documentarystyle_visual_featuring_a_darks_0.mp4"
+                    type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
             <div class="hero-content">
                 <h1 class="reveal-text" data-i18n="hero-title">Cortex VR</h1>
                 <p class="fade-in sub-headline" data-i18n="hero-subline">Real-time synchronization for the immersive
@@ -82,13 +87,8 @@
 
         </section>
 
-        <section id="how-it-works" class="details-section">
-
-
-
+        <section id="technology-tabs" class="details-section">
             <div class="tabs-container">
-                <div class="tabs-content">
-                </div>
 
                 <!-- Admin Tab -->
                 <div id="admin" class="tab-pane">
@@ -101,8 +101,8 @@
 
                         </div>
                         <div class="card-image">
-                            <img src="C:/Users/User/.gemini/antigravity/brain/37e39513-59e3-490c-b87a-2cac37943347/admin_dashboard_abstract_1768943634815.png"
-                                alt="Admin Dashboard">
+                            <img src="https://placehold.co/800x500/020617/0ea5e9?text=Admin+Dashboard"
+                                alt="Painel Administrativo">
                         </div>
                     </div>
                 </div>
@@ -111,8 +111,8 @@
                 <div id="vr" class="tab-pane">
                     <div class="featured-card">
                         <div class="card-image">
-                            <img src="C:/Users/User/.gemini/antigravity/brain/37e39513-59e3-490c-b87a-2cac37943347/vr_headset_minimal_1768943619587.png"
-                                alt="VR Experience">
+                            <img src="https://placehold.co/800x500/020617/8b5cf6?text=VR+Experience"
+                                alt="Experiência VR">
                         </div>
                         <div class="card-body">
                             <span class="badge" data-i18n="tab-vr">Experience</span>
@@ -129,45 +129,177 @@
             </div>
         </section>
 
-        <section id="tech-features" class="details-section">
+        <section id="features" class="details-section features-section">
             <div class="section-header">
-                <h1 data-i18n="tech-grid-title">Tecnologias</h1>
+                <h1 data-i18n="features-title">Funcionalidades</h1>
+                <p data-i18n="features-description">O Cortex VR oferece controle total e sincronização perfeita para
+                    experiências VR profissionais.</p>
             </div>
-            <div class="tech-cards">
-                <div class="tech-card">
-                    <img src="assets/icons/pwa.svg" alt="PWA Icon" class="tech-icon">
-                    <h4 data-i18n="tech-pwa-title">Progressive Web App</h4>
-                    <p data-i18n="tech-pwa-desc">Install on any device for a native-like experience and offline access.
-                    </p>
+
+            <div class="features-grid">
+                <!-- Sincronização Offline -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h4 data-i18n="feature-offline-title">Sincronização Offline</h4>
+                    <p data-i18n="feature-offline-desc">Funciona sem internet. Sincronize vídeos na rede local com
+                        latência mínima.</p>
                 </div>
-                <div class="tech-card">
-                    <img src="assets/icons/websockets.svg" alt="WebSockets Icon" class="tech-icon">
-                    <h4 data-i18n="tech-websockets-title">WebSockets</h4>
-                    <p data-i18n="tech-websockets-desc">Real-time, bidirectional communication for instant sync.
-                    </p>
+
+                <!-- Upload de Vídeos -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M17 8L12 3L7 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M12 3V15" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h4 data-i18n="feature-upload-title">Upload de Vídeos</h4>
+                    <p data-i18n="feature-upload-desc">Carregue vídeos 360° e 180° diretamente pela interface web.
+                        Suporta até 8K.</p>
                 </div>
-                <div class="tech-card">
-                    <img src="assets/icons/nodejs.svg" alt="Node.js Icon" class="tech-icon">
-                    <h4 data-i18n="tech-nodejs-title">Node.js</h4>
-                    <p data-i18n="tech-nodejs-desc">High-performance backend for managing dozens of connections.</p>
+
+                <!-- Central Admin -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="3" width="7" height="7" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <rect x="14" y="3" width="7" height="7" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <rect x="14" y="14" width="7" height="7" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <rect x="3" y="14" width="7" height="7" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h4 data-i18n="feature-admin-title">Central Admin</h4>
+                    <p data-i18n="feature-admin-desc">Painel de controle centralizado para gerenciar todos os
+                        dispositivos VR simultaneamente.</p>
                 </div>
-                <div class="tech-card">
-                    <img src="assets/icons/webrtc.svg" alt="WebRTC Icon" class="tech-icon">
-                    <h4 data-i18n="tech-webrtc-title">WebRTC</h4>
-                    <p data-i18n="tech-webrtc-desc">Peer-to-peer connections for ultra-low latency video streaming.</p>
+
+                <!-- Multiplataforma -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2" />
+                            <path d="M8 21H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <path d="M12 17V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="18" cy="8" r="3" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h4 data-i18n="feature-multiplatform-title">Multiplataforma</h4>
+                    <p data-i18n="feature-multiplatform-desc">Progressive Web App funciona em qualquer dispositivo:
+                        Quest, PC, tablet, smartphone.</p>
+                </div>
+
+                <!-- Monitoramento -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 12H18L15 21L9 3L6 12H2" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h4 data-i18n="feature-monitoring-title">Monitoramento</h4>
+                    <p data-i18n="feature-monitoring-desc">Acompanhe bateria, status de conexão e reprodução de cada
+                        headset em tempo real.</p>
+                </div>
+
+                <!-- Espelhamento VR -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20M2 8V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <line x1="2" y1="20" x2="2.01" y2="20" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h4 data-i18n="feature-mirror-title">Espelhamento VR</h4>
+                    <p data-i18n="feature-mirror-desc">Visualize o que cada usuário está vendo no admin em tempo real
+                        para suporte e controle.</p>
                 </div>
             </div>
         </section>
 
-        <section id="applications" class="details-section">
+        <section id="applications" class="applications-section">
             <div class="section-header">
-                <h1 data-i18n="applications-title">Applications</h1>
-                <p data-i18n="applications-description">The Cortex VR system is built on a robust and scalable
-                    architecture designed to handle the demands of professional and educational immersive experiences.
-                    Here's how it works:</p>
+                <h1 data-i18n="apps-title">Aplicações Reais</h1>
+                <p data-i18n="apps-subtitle">Cortex VR transforma qualquer ambiente em uma zona de alta produtividade e
+                    imersão.</p>
             </div>
 
+            <div class="apps-grid">
+                <!-- Left: Media Preview -->
+                <div class="app-media-container">
+                    <video autoplay muted loop playsinline class="app-media-content" id="app-video-preview">
+                        <source
+                            src="https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-his-laptop-in-a-sunny-office-33391-large.mp4"
+                            type="video/mp4">
+                    </video>
+                    <div class="app-media-overlay"></div>
+                    <div class="app-media-play-btn">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" fill="currentColor" />
+                        </svg>
+                    </div>
+                </div>
 
+                <!-- Right: Interactive List -->
+                <div class="app-cards-list">
+                    <div class="app-item-card active" data-app="education"
+                        data-video="https://assets.mixkit.co/videos/preview/mixkit-students-working-in-a-library-32943-large.mp4">
+                        <div class="app-item-header">
+                            <svg class="app-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                            </svg>
+                            <h4 data-i18n="app-edu-title">Educação</h4>
+                        </div>
+                        <p data-i18n="app-edu-desc">Transforme salas de aula em laboratórios virtuais infinitos.</p>
+                    </div>
+
+                    <div class="app-item-card" data-app="training"
+                        data-video="https://assets.mixkit.co/videos/preview/mixkit-close-up-of-a-person-working-on-a-production-line-34676-large.mp4">
+                        <div class="app-item-header">
+                            <svg class="app-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                            </svg>
+                            <h4 data-i18n="app-train-title">Treinamento Profissional</h4>
+                        </div>
+                        <p data-i18n="app-train-desc">Simulações de risco zero para indústrias de alta complexidade.</p>
+                    </div>
+
+                    <div class="app-item-card" data-app="casual"
+                        data-video="https://assets.mixkit.co/videos/preview/mixkit-monitor-displaying-a-video-game-concept-8742-large.mp4">
+                        <div class="app-item-header">
+                            <svg class="app-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 12h4m12 0a10 10 0 1 1-20 0 10 10 0 0 1 20 0zM15 9l2 2m-2 2l2-2" />
+                            </svg>
+                            <h4 data-i18n="app-casual-title">Entretenimento & Casual</h4>
+                        </div>
+                        <p data-i18n="app-casual-desc">Diversão imersiva com sincronização perfeita para grupos.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
 
@@ -186,7 +318,6 @@
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
 
     <!-- Application Entry -->
-    <script src="js/background.js"></script>
     <script type="module" src="js/main.js"></script>
 </body>
 

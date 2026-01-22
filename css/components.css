@@ -1,21 +1,4 @@
-/* Glass & Glow Button (Nexora Styling) */
-.glow-button.pill {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 50px;
-    padding: 0.7rem 2.2rem;
-    color: white;
-    font-size: 0.7rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    backdrop-filter: blur(10px);
-
-    &:hover {
-        background: white;
-        color: black;
-    }
-}
-
+/* Glass & Glow Button */
 .glass-button {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.15);
@@ -28,12 +11,12 @@
     cursor: pointer;
     backdrop-filter: blur(20px);
     transition: all 0.4s ease;
+}
 
-    &:hover {
-        background: rgba(255, 255, 255, 0.1);
-        transform: translateY(-3px);
-        border-color: rgba(255, 255, 255, 0.4);
-    }
+.glass-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 .action-link {
@@ -42,10 +25,10 @@
     font-weight: 500;
     opacity: 0.8;
     transition: opacity 0.3s;
+}
 
-    &:hover {
-        opacity: 1;
-    }
+.action-link:hover {
+    opacity: 1;
 }
 
 /* Glow Button (Premium Version) */
@@ -55,19 +38,19 @@
     color: white;
     padding: 1rem 2.5rem;
     border-radius: 50px;
-    /* Rounded consistent aesthetic */
     font-size: 0.8rem;
     font-weight: 900;
     letter-spacing: 3px;
     cursor: pointer;
     transition: all 0.4s;
     text-transform: uppercase;
+    text-decoration: none;
+}
 
-    &:hover {
-        background: white;
-        color: black;
-        box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
-    }
+.glow-button:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
 }
 
 /* Loading Screen */
